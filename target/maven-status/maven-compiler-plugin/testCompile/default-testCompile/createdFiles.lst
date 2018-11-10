@@ -1,0 +1,8 @@
+stepDefinitions\Hooks.class
+appium\MyAppium.class
+cucumber\TestContext.class
+stepDefinitions\HomePageSteps.class
+stepDefinitions\CartPageSteps.class
+runners\TestRunnerTestNg.class
+runners\TestRunner.class
+stepDefinitions\ProductPageSteps.class

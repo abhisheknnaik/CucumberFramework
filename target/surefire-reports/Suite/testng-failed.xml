@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test name="Test - 1">
+    <classes>
+      <class name="runners.TestRunnerTestNg"/>
+    </classes>
+  </test> <!-- Test - 1 -->
+  <test name="Test - 1(failed)">
+    <classes>
+      <class name="runners.TestRunnerTestNg">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runners.TestRunnerTestNg -->
+    </classes>
+  </test> <!-- Test - 1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
