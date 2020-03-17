@@ -14,12 +14,12 @@ import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/functionalTests", glue = { "stepDefinitions" }, plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
+@CucumberOptions(features = "src/test/resources/functionalTests", glue = { "stepDefinitions" }, plugin = {
+		"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true,tags= {"@Smoke"})
 public class TestRunnerTestNg extends AbstractTestNGCucumberTests {
 	@AfterClass
-	public  void writeExtentReport() {
-		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance()
-				.getConfigReader().getReportConfigPath()));
+	public static void writeExtentReport() {
+		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
 		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
 		Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
 		Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");

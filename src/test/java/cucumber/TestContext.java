@@ -1,18 +1,18 @@
 package cucumber;
 
 import managers.PageObjectManager;
-import managers.WebDriverManager;
+import managers.WebDriverManagerClass;
 
 public class TestContext {
-	private WebDriverManager webDriverManager;
+	private WebDriverManagerClass webDriverManager;
 	private PageObjectManager pageObjectManager;
 	
 	public TestContext(){
-		webDriverManager = new WebDriverManager();
+		webDriverManager = new WebDriverManagerClass();
 		pageObjectManager = new PageObjectManager(webDriverManager.getDriver());
 	}
 	
-	public WebDriverManager getWebDriverManager() {
+	public WebDriverManagerClass getWebDriverManager() {
 		return webDriverManager;
 	}
 	

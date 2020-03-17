@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="122449" started-at="2018-11-10T13:25:27Z" finished-at="2018-11-10T13:27:29Z">
+  <suite name="Suite" duration-ms="80577" started-at="2020-03-17T13:16:39Z" finished-at="2020-03-17T13:18:00Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Test - 1" duration-ms="122449" started-at="2018-11-10T13:25:27Z" finished-at="2018-11-10T13:27:29Z">
+    <test name="Test - 1" duration-ms="80577" started-at="2020-03-17T13:16:39Z" finished-at="2020-03-17T13:18:00Z">
       <class name="runners.TestRunnerTestNg">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="setUpClass" is-config="true" duration-ms="274" started-at="2018-11-10T18:55:27Z" finished-at="2018-11-10T18:55:27Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="setUpClass" is-config="true" duration-ms="967" started-at="2020-03-17T18:46:39Z" finished-at="2020-03-17T18:46:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="feature" duration-ms="120905" started-at="2018-11-10T18:55:27Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-11-10T18:57:28Z">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="feature" duration-ms="77879" started-at="2020-03-17T18:46:40Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-17T18:47:58Z">
           <params>
             <param index="0">
               <value>
@@ -24,10 +24,10 @@
           </params>
           <exception class="cucumber.runtime.CucumberException">
             <message>
-              <![CDATA[java.lang.AssertionError: abhishek expected [abhi] but found [Failed to verify : ]]]>
+              <![CDATA[java.lang.AssertionError: expected [new test fail] but found [new test]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[cucumber.runtime.CucumberException: java.lang.AssertionError: abhishek expected [abhi] but found [Failed to verify : ]
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.AssertionError: expected [new test fail] but found [new test]
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -63,21 +63,22 @@
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:103)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:74)
-Caused by: java.lang.AssertionError: abhishek expected [abhi] but found [Failed to verify : ]
+Caused by: java.lang.AssertionError: expected [new test fail] but found [new test]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:190)
-	at stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart(CartPageSteps.java:26)
-	at ✽.And moves to checkout from mini cart(End2End_Test.feature:8)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at stepDefinitions.HomePageSteps.failStep(HomePageSteps.java:32)
+	at ✽.When Execute fail step(End2End_Test.feature:14)
 ]]>
             </full-stacktrace>
           </exception> <!-- cucumber.runtime.CucumberException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="tearDownClass" is-config="true" duration-ms="1134" started-at="2018-11-10T18:57:28Z" finished-at="2018-11-10T18:57:29Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:runners.TestRunnerTestNg@1bce4f0a]" name="tearDownClass" is-config="true" duration-ms="1272" started-at="2020-03-17T18:47:58Z" finished-at="2020-03-17T18:48:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

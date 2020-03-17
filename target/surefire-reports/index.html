@@ -129,13 +129,13 @@
                   </a> <!-- feature(Automate E2E tests) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Automate E2E tests)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.AssertionError: abhishek expected [abhi] but found [Failed to verify : ]
+                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.AssertionError: expected [new test fail] but found [new test]
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
-Caused by: java.lang.AssertionError: abhishek expected [abhi] but found [Failed to verify : ]
-	at stepDefinitions.CartPageSteps.moves_to_checkout_from_mini_cart(CartPageSteps.java:26)
-	at ✽.And moves to checkout from mini cart(End2End_Test.feature:8)
-... Removed 38 stack frames
+Caused by: java.lang.AssertionError: expected [new test fail] but found [new test]
+	at stepDefinitions.HomePageSteps.failStep(HomePageSteps.java:32)
+	at ✽.When Execute fail step(End2End_Test.feature:14)
+... Removed 39 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
@@ -207,12 +207,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'runners.TestRunnerTestNg')
-data.setCell(0, 3, 120905);
+data.setCell(0, 3, 77879);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -247,11 +247,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(Automate E2E tests)</span>
-                <span class="method-start">363 ms</span>
+                <span class="method-start">1325 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">121294 ms</span>
+                <span class="method-start">79251 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

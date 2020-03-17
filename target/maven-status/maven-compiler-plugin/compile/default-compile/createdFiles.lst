@@ -7,8 +7,8 @@ seleniumHelper\CheckBoxOrRadioButtonHelper.class
 managers\FileReaderManager.class
 seleniumHelper\DropDownHelper.class
 seleniumHelper\JavaScriptHelper.class
+managers\WebDriverManagerClass.class
 seleniumHelper\AlertHelper.class
-managers\WebDriverManager.class
 seleniumHelper\ButtonHelper.class
 seleniumHelper\NavigationHelper.class
 pageObjects\CartPage.class

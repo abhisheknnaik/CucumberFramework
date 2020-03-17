@@ -9,19 +9,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class WebDriverManager {
+
+public class WebDriverManagerClass {
 	private WebDriver driver;
 	private static String driverType;
 	private static String environmentType;
 	private static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";
 
-	public WebDriverManager() {
+	public WebDriverManagerClass() {
 
 		if (System.getProperty("excecutionEnvironment") != null) {
 			System.out.println(System.getProperty("excecutionEnvironment"));
 		}
 		if (System.getProperty("excecutionBrowser") != null) {
-			System.out.println(System.getProperty("excecutionBrowser"));
+			System.out.println("Browser for execution :"+System.getProperty("excecutionBrowser"));
 			driverType=System.getProperty("excecutionBrowser");
 		} else {
 			driverType = FileReaderManager.getInstance().getConfigReader().getBrowser();
@@ -70,6 +71,12 @@ public class WebDriverManager {
 			System.setProperty(CHROME_DRIVER_PROPERTY,
 					FileReaderManager.getInstance().getConfigReader().getDriverPath());
 			driver = new ChromeDriver();
+			
+			//http://automationtesting.in/webdrivermanager/
+			
+		//	WebDriverManager.chromedriver().setup();
+	      //  WebDriver driver = new ChromeDriver();
+		  //       driver = new ChromeDriver();
 			break;
 		case "iexplorer":
 			System.setProperty("webdriver.ie.driver",
