@@ -31,4 +31,10 @@ public class HomePageSteps {
 	public void failStep() {
 		Assert.assertEquals("new test", "new test fail");
 	}
+
+	@Given("^Step from \"([^\"]*) in \"([^\"]*) feature file$")
+	public void step(String scenario, String file) {
+		System.out.format("Thread ID - %2d - %s from %s feature file.\n", Thread.currentThread().getId(), scenario,
+				file);
+	}
 }

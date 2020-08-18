@@ -34,8 +34,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -49,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 17, 2020 06:46:41 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Jun 15, 2020 07:47:28 PM</span>
 				</a>
 			</li>
 			<li>
@@ -74,8 +72,7 @@
 					<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+											<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -139,7 +136,7 @@
 					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -154,7 +151,7 @@
 					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> others
 				</div>
 			</div>
 		</div>
@@ -166,10 +163,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>4</span> others
 				</div>
 			</div>
 		</div>
@@ -183,57 +180,76 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Automate E2E tests</span>
-						<span class='test-time'>Mar 17, 2020 06:46:41 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Jun 15, 2020 07:47:28 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='skip'>
 	<div class='category-list'>
 		<span class='category label white-text'>@Smoke</span>
 	</div>
-	<span class='duration right label'>0h 1m 13s+299ms</span>
+	<span class='duration right label'>0h 0m 7s+101ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Customer searches a product</span>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node given pass' status='pass'>
+		<li test-id='3' class='node given skip' status='skip'>
 			
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given user is on Home Page</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='4' class='node when pass' status='pass'>
+		<li test-id='4' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When he search for "book"</span>
-				<div class='pre'>passed</div>
+				<div class='pre'>skipped</div>
 			
 		</li>
-		<li test-id='5' class='node when fail' status='fail'>
+		<li test-id='5' class='node when skip' status='skip'>
 			
 			<b>When</b>
 			
 			<span class="bdd-step-name">When Execute fail step</span>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="G:\Selenium_Automation\CucumberFramework\target\cucumber-reports\screenshots\Customer_searches_a_product.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-				<div class='pre'><pre>java.lang.AssertionError: expected [new test fail] but found [new test]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at stepDefinitions.HomePageSteps.failStep(HomePageSteps.java:32)
-	at ?.When Execute fail step(End2End_Test.feature:14)
-</pre></div>
+				<div class='pre'>skipped</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Scenarios feature file</span>
+						<span class='test-time'>Jun 15, 2020 07:47:39 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='7' status='skip'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Smoke</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+295ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Customer place an order</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='8' class='node given skip' status='skip'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given user is on Home Page</span>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -294,14 +310,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Smoke</span>
 						<span class='category-status right'>
-							<span class='label fail'>1</span>
+							<span class='label others'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							
-							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
+							<span class='label yellow darken-2 white-text'>Others: 2</span>
 						</div>
 					
 						<div class='category-tests'>
@@ -315,9 +331,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 17, 2020 06:46:41 PM</td>
+										<td>Jun 15, 2020 07:47:28 PM</td>
 										<td class='linked' test-id='2'>Automate E2E tests.Customer searches a product</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status skip'>skip</span></td>
+									</tr>
+									<tr>
+										<td>Jun 15, 2020 07:47:39 PM</td>
+										<td class='linked' test-id='7'>Scenarios feature file.Customer place an order</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -336,145 +357,6 @@
 	</div>
 </div>
 <!-- category view -->
-<div id='author-view' class='view hide'>
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Authors</h5>
-                <ul id='author-collection' class='author-collection'>
-
-                        <li class='author displayed active'>
-                            <div class='author-heading'>
-                                <span class='author-name'>AbhishekNaik</span>
-                                <span class='author-status right'>
-                                        <span class='label fail'>1</span>
-						        </span>
-                            </div>
-                            <div class='author-content hide'>
-                                <div class='author-status-counts'>
-                                    
-                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
-                                    
-                                </div>
-
-                                <div class='author-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Mar 17, 2020 06:46:41 PM</td>
-                                                <td class='linked' test-id='2'>Automate E2E tests.Customer searches a product</td>
-                                                <td><span class='test-status fail'>fail</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='author-name'></h5>
-        </div>
-    </div>
-</div>
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Mar 17, 2020 06:47:55 PM</td>
-                                                        <td class='linked' test-id='5'>Automate E2E tests.Customer searches a product.When Execute fail step</td>
-                                                        <td><pre><pre>java.lang.AssertionError: expected [new test fail] but found [new test]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at stepDefinitions.HomePageSteps.failStep(HomePageSteps.java:32)
-	at ?.When Execute fail step(End2End_Test.feature:14)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -484,37 +366,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 17, 2020 06:46:41 PM</div>
+					<div class='panel-lead'>Jun 15, 2020 07:47:28 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 17, 2020 06:47:58 PM</div>
+			 		<div class='panel-lead'>Jun 15, 2020 07:47:46 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>77,612ms</div>
+					<div class='panel-lead'>18,204ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -532,8 +414,8 @@
 						<tr>
 							<td>@Smoke</td>
 							<td>0</td>
-							<td>1</td>
 							<td>0</td>
+							<td>2</td>
 							<td>
 									0%
 							</td>
@@ -552,30 +434,30 @@
 		<script>
 			var statusGroup = {
 				passParent: 0,
-				failParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 1,
+				skipParent: 2,
+				exceptionsParent: 2,
 				
 				passChild: 0,
-				failChild: 1,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 2,
 				infoChild: 0,
-				exceptionsChild: 1,
+				exceptionsChild: 2,
 				
-				passGrandChild: 2,
-				failGrandChild: 1,
+				passGrandChild: 0,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 4,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 4,
 			};
 		</script>
 		

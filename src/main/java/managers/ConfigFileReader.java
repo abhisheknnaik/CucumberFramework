@@ -62,11 +62,11 @@ public class ConfigFileReader {
 	return environmentName;
 	}
  
-	public Boolean getBrowserWindowSize() {
-		String windowSize = properties.getProperty("windowMaximize");
-		if(windowSize != null) return Boolean.valueOf(windowSize);
-		return true;
-	}
+//	public Boolean getBrowserWindowSize() {
+//		String windowSize = properties.getProperty("windowMaximize");
+//		if(windowSize != null) return Boolean.valueOf(windowSize);
+//		return true;
+//	}
 	
 	public String getReportConfigPath(){
 		String reportConfigPath = properties.getProperty("reportConfigPath");

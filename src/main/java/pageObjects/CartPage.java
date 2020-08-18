@@ -32,5 +32,7 @@ public class CartPage {
 		btn_ContinueToCheckout.click();
 		try { Thread.sleep(5000);}
 		catch (InterruptedException e) {}
+		
+		
 	}
 }

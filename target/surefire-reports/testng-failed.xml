@@ -11,7 +11,7 @@
       <class name="runners.TestRunnerTestNg">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
+          <include name="feature" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runners.TestRunnerTestNg -->

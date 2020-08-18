@@ -1,1 +1,1 @@
-mvn clean install -DexcecutionEnvironment=dev -DexcecutionLanguage=en -DexcecutionBrowser=firefox
+mvn clean install -DexcecutionEnvironment=dev -DexcecutionLanguage=en -DexcecutionBrowser=chrome
